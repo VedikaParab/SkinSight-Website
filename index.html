@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup Complete</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, sans-serif;
+        background: url("assets/background.png") no-repeat center center fixed;
+        background-size: cover;
+        min-height: 100vh;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .header {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 15px 30px;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        animation: slideInDown 0.6s ease-out;
+      }
+
+      @keyframes slideInDown {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .logo {
+        height: 60px;
+        width: auto;
+        max-width: 200px;
+      }
+
+      .main-content {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      .container {
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        padding: 60px 40px;
+        text-align: center;
+        max-width: 500px;
+        width: 100%;
+        animation: fadeInUp 0.8s ease-out;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .checkmark {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+        animation: bounceIn 1s ease-out 0.3s both;
+      }
+
+      @keyframes bounceIn {
+        0% {
+          opacity: 0;
+          transform: scale(0.3);
+        }
+        50% {
+          opacity: 1;
+          transform: scale(1.05);
+        }
+        70% {
+          transform: scale(0.9);
+        }
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      .message {
+        font-size: 1.2em;
+        color: #333;
+        margin-bottom: 40px;
+        line-height: 1.5;
+        animation: fadeIn 0.8s ease-out 0.5s both;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .back-button {
+        display: inline-block;
+        background: linear-gradient(135deg, #ffb2e8 0%, #c711a8 100%);
+        color: white;
+        text-decoration: none;
+        padding: 18px 36px;
+        border-radius: 50px;
+        font-size: 1.1em;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        box-shadow: 0 8px 15px rgba(102, 126, 234, 0.3);
+        animation: slideInUp 0.8s ease-out 0.7s both;
+      }
+
+      @keyframes slideInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .back-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 25px rgba(102, 126, 234, 0.4);
+      }
+
+      .back-button:active {
+        transform: translateY(0);
+      }
+
+      /* Mobile responsiveness */
+      @media (max-width: 600px) {
+        .header {
+          padding: 5px 20px;
+        }
+
+        .logo {
+          height: 60px;
+        }
+
+        .container {
+          padding: 40px 30px;
+          margin: 20px;
+        }
+
+        .message {
+          font-size: 1.1em;
+        }
+
+        .back-button {
+          padding: 16px 32px;
+          font-size: 1em;
+        }
+      }
+
+      @media (max-width: 400px) {
+        .header {
+          padding: 5px 15px;
+        }
+
+        .logo {
+          height: 60px;
+        }
+
+        .container {
+          padding: 30px 20px;
+        }
+
+        .checkmark {
+          font-size: 2em;
+        }
+
+        .message {
+          font-size: 1em;
+          margin-bottom: 30px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <img src="assets\logo.png" alt="Logo" class="logo" />
+    </div>
+    <div class="main-content">
+      <div class="container">
+        <div class="checkmark">
+            <img src="assets\check.png" alt="checkmark">
+        </div>
+        <div class="message">
+          You have successfully signed up. Please go back to the app.
+        </div>
+        <a href="myapp://home" class="back-button">Go back to App</a>
+      </div>
+    </div>
+  </body>
+</html>
